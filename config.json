@@ -1,0 +1,22 @@
+{
+  "exchange": "binance",
+  "symbols": ["BTC/USDT", "ETH/USDT"],
+  "timeframe": "1h",
+  "starting_balance": 1000,
+  "backtest_years": 2,
+  "poll_seconds": 60,
+  "strategy": {
+    "ema_fast": 50, "ema_slow": 200,
+    "rsi_period": 14, "rsi_min": 50, "rsi_max": 70,
+    "vol_period": 20, "atr_period": 14,
+    "sl_atr": 2.0, "tp_atr": 3.0,
+    "min_signals": 2, "cooldown_bars": 6
+  },
+  "risk": {
+    "risk_per_trade_pct": 1.0, "max_alloc_pct": 30,
+    "max_daily_loss_pct": 3.0, "max_drawdown_pct": 15.0,
+    "max_open_positions": 2,
+    "fee_pct": 0.1, "slippage_pct": 0.05
+  },
+  "monitor": {"tolerance_pct": 11, "min_days": 7, "min_trades": 10}
+}
